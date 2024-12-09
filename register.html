@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register Page</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <ul class="main-menu">
+                <li><a href="index.html" title="Home Page">Home</a></li>
+                <li><a href="menu.html" title="Menu Page">Menu</a></li>
+                <li><a href="order.html" title="Order Page">Order</a></li>
+                <li><a href="about.html" title="About Us">About Us</a></li>
+                <li><a href="register.html" title="Member Resgistration">Member Registration</a></li>
+            </ul>
+        </nav>
+        <header>
+
+        </header>
+        <h1 class="register">Registration Page</h1>
+        <form method="post" action="https://jkorpela.fi/cgi-bin/echo.cgi">
+            <div>
+                <fieldset>
+                    <legend>Register as member</legend>
+                    <div>
+                        <label>Login ID:</label>
+                        <input type="text" name="loginid" required pattern="[A-Za-z0-9]{4-8}" title="4-8 characters" placeholder="Type login ID"/>
+                    </div>
+                    <div>
+                        <label>Name:</label>
+                        <input type="name" name="name" required placeholder="Type name here"/>
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" name="pwd" pattern="^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.*[!@#$%^&*_=+-]).{10,}$" title="must contain at least 10 characters, 1 upper case 1 lower case and 1 special character" placeholder="Type password here"/>
+                    </div>
+                    <div>
+                        <label>Mobile No.: </label>
+                        <input name="telno" type="tel" required pattern=[0-9]{8} title="Pls enter 8 digit number only" placeholder="Pls type your number here"/>
+                    </div>
+                    <div>
+                        <label>Gender :</label>
+                        <input type="radio" name="gender" value="M" required checked="checked" />Male &nbsp;&nbsp;
+                        <input type="radio" name="gender" value="F" required />Female 
+                    </div>
+                    <div>
+                        <label>Email address:</label>
+                        <input name="email" type="email" required placeholder="Type your email here"/>
+                    </div>
+                    <div>
+                        <label>Delivery Address: </label>
+                        <br />
+                        <textarea name="address" type="text" required cols="50" rows="3" placeholder="Type delivery address here"></textarea>
+                    </div>
+                    <div>
+                            <label>Favourite Food: </label>
+                            <select name="order" required placeholder="Must select one">
+                                <option value="Pork chop egg fried rice">Egg fried rice</option>
+                                <option value="Chicken chop egg fried rice">Chicken chop egg fried rice</option>
+                                <option value="Pork chop egg fried rice">Pork chop egg fried rice</option>
+                                <option value="Prawn egg fried rice">Prawn egg fried rice</option>
+                                <option value="Pork chop rice">Pork chop rice</option>
+                                <option value="Chicken chop rice">Chicken chop rice</option>
+                            </select>
+                        </div>
+                </fieldset>
+            </div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>        
+        <footer>Copyright &copy; done by Shang Xian</footer>
+    </body>
+</html>

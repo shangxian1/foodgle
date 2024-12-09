@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Order Page</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <ul class="main-menu">
+                <li><a href="index.html" title="Home Page">Home</a></li>
+                <li><a href="menu.html" title="Menu Page">Menu</a></li>
+                <li><a href="order.html" title="Order Page">Order</a></li>
+                <li><a href="about.html" title="About Us">About Us</a></li>
+                <li><a href="register.html" title="Member Resgistration">Member Registration</a></li>
+            </ul>
+        </nav>
+        <header>
+
+        </header>
+        <h1 class="order">Order Page</h1>
+        <section id="order1">
+            <form method="post" action="https://jkorpela.fi/cgi-bin/echo.cgi">
+            <div id="flex-container">
+                <fieldset>
+                    <legend>Personal information</legend>
+                        <div>
+                            <label>Name: </label>
+                            <input name="name" type="text" placeholder="Type name here"/>
+                        </div>
+                        <div>
+                            <label>Phone No.: </label>
+                            <input name="telno" type="tel" required pattern=[0-9]{8} title="Pls enter 8 digit number only" placeholder="Pls type your number here"/>
+                        </div>
+                        <div>
+                            <label>Email address: </label>
+                            <input name="email" type="text" required placeholder="Type email here"/>
+                        </div>
+                        <div>
+                            <label>Date of delivery: </label>
+                            <input name="date" type="date" required/>
+                        </div>
+                        <div>
+                            <label>Delivery Address: </label>
+                            <br />
+                            <textarea name="address" type="text" required cols="50" rows="3" placeholder="Type delivery address here"></textarea>
+                        </div>
+                </fieldset>
+                <br />
+                <fieldset>
+                    <legend>Order details</legend>
+                        <div>
+                            <label>Order: </label>
+                            <select name="order" required placeholder="Must select one">
+                                <option value="Pork chop egg fried rice">Egg fried rice</option>
+                                <option value="Chicken chop egg fried rice">Chicken chop egg fried rice</option>
+                                <option value="Pork chop egg fried rice">Pork chop egg fried rice</option>
+                                <option value="Prawn egg fried rice">Prawn egg fried rice</option>
+                                <option value="Pork chop rice">Pork chop rice</option>
+                                <option value="Chicken chop rice">Chicken chop rice</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Quantity: </label>
+                            <input name="qty" type="number" placeholder="Type quantity here"/>
+                        </div>
+                        <div>
+                            <label>Special requests: </label>
+                            <br />
+                            <textarea name="requests" type="text" required cols="50" rows="3" placeholder="Type special requests here"></textarea>
+                        </div>
+                </fieldset>
+            </div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>          
+            </form>
+        </section>
+        <footer>Copyright &copy; done by Shang Xian</footer>
+    </body>
